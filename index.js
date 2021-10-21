@@ -7,6 +7,7 @@ const globalErrorHandler = require("./controllers/errorController");
 
 const lawyerRouter = require("./routes/lawyerRouter");
 const clientRouter = require("./routes/clientRouter");
+const appointmentRouter = require("./routes/appointmentRouter");
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(express.json());
 //ROUTES
 app.use("/api/lawyers", lawyerRouter);
 app.use("/api/clients", clientRouter);
+app.use("/api/appointments", appointmentRouter);
 
 // RUN
 app.all("*", (req, res, next) => {

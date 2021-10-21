@@ -19,7 +19,6 @@ const lawyerSchema = new mongoose.Schema({
     numberOfRatings: Number,
     latitude: String,
     longitude: String,
-    views: Number
 });
 
 module.exports = mongoose.model("Lawyer", lawyerSchema);
