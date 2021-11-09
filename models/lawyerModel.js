@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const lawyerSchema = new mongoose.Schema({
     idAuth: String,
-    name:{
+    name: {
         type: String,
         required: [true, "A lawyer must have a name"]
     },
@@ -15,10 +15,12 @@ const lawyerSchema = new mongoose.Schema({
         type: Number,
         min: 0,
         max: 5,
-      },
+    },
     numberOfRatings: Number,
     latitude: String,
     longitude: String,
+    views: Number,
+    yearOfExperience: String
 });
 
 module.exports = mongoose.model("Lawyer", lawyerSchema);
