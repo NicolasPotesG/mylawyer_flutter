@@ -11,7 +11,8 @@ const clientSchema = new mongoose.Schema({
     hasMeetings: Boolean,
     contactedLawyersEmail: Number,
     contactedLawyersPhone: Number,
-    appointmentsDone: Number
+    appointmentsDone: Number,
+    lawyersChecked: Number
 });
 
 module.exports = mongoose.model("Client", clientSchema);
