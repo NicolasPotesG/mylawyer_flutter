@@ -5,7 +5,7 @@ const clientSchema = new mongoose.Schema({
     name: {
         type: String,
         required: [true, "A client must have a name"]
-    }, 
+    },
     phoneNumber: Number,
     emailAddress: String,
     hasMeetings: Boolean,
