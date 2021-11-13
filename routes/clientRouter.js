@@ -35,7 +35,7 @@ router.route("/:id/img").patch(upload.single("img"), async (req, res) => {
     $set: {
       img: req.file.path,
     }
-  }, { new: true, runValidators: true },
+  }, { new: true },
     (err, client) => {
       if (err) { print(err); return res.status(500).send(err) };
       const response = {
