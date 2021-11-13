@@ -5,7 +5,7 @@ const clientSchema = new mongoose.Schema({
     name: {
         type: String,
         required: [true, "A client must have a name"]
-    },
+    }, 
     phoneNumber: Number,
     emailAddress: String,
     hasMeetings: Boolean,
@@ -13,7 +13,7 @@ const clientSchema = new mongoose.Schema({
     contactedLawyersPhone: Number,
     appointmentsDone: Number,
     lawyersChecked: Number,
-    img: String
+    img: { String, default: "" }
 });
 
 module.exports = mongoose.model("Client", clientSchema);
