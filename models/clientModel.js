@@ -12,7 +12,8 @@ const clientSchema = new mongoose.Schema({
     contactedLawyersEmail: Number,
     contactedLawyersPhone: Number,
     appointmentsDone: Number,
-    lawyersChecked: Number
+    lawyersChecked: Number,
+    img: String
 });
 
 module.exports = mongoose.model("Client", clientSchema);
