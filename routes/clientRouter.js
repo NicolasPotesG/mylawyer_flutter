@@ -31,8 +31,10 @@ const upload = multer({
 });
 
 router.route("/:id/img").patch(upload.single("img"), async (req, res) => {
-  await Client.findOneAndUpdate({ idAuth: req.params.id }, $set: {
-    img: req.file.path,
+  await Client.findOneAndUpdate({ idAuth: req.params.id }, {
+    $set: {
+      img: req.file.path,
+    }
   }, { new: true, runValidators: true },
     (err, client) => {
       if (err) { print(err); return res.status(500).send(err) };
