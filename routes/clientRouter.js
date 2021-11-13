@@ -30,6 +30,7 @@ const upload = multer({
   fileFilter: fileFilter,
 });
 
+//hola
 router.route("/:id/img").patch(upload.single("img"), async (req, res) => {
   const file = req.file
   await Client.findOneAndUpdate({ idAuth: req.params.id }, {
