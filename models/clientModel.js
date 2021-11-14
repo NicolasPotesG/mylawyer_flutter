@@ -13,7 +13,8 @@ const clientSchema = new mongoose.Schema({
     contactedLawyersPhone: Number,
     appointmentsDone: Number,
     lawyersChecked: Number,
-    img: { String, default: "" }
+    img: { String, default: "" },
+    contImg: Number,
 });
 
 module.exports = mongoose.model("Client", clientSchema);
