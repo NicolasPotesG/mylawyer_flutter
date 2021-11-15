@@ -20,7 +20,8 @@ const lawyerSchema = new mongoose.Schema({
     latitude: String,
     longitude: String,
     views: Number,
-    yearOfExperience: String
+    yearOfExperience: String,
+    distance: Number,
 });
 
 module.exports = mongoose.model("Lawyer", lawyerSchema);
