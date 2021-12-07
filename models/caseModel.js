@@ -8,6 +8,7 @@ const caseSchema = new mongoose.Schema({
     clientId: String,
     lawyerId: String,
     endDate: String,
+    lawyerName: String
 });
 
 module.exports = mongoose.model("Case", caseSchema);
