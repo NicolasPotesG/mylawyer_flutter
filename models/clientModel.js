@@ -15,6 +15,7 @@ const clientSchema = new mongoose.Schema({
     lawyersChecked: Number,
     img: { String, default: "" },
     contImg: Number,
+    darkMode: Boolean
 });
 
 module.exports = mongoose.model("Client", clientSchema);
